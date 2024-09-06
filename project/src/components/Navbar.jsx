@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faBars } from '@fortawesome/free-solid-svg-icons';
 import Setting from './Setting';
@@ -7,8 +7,6 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const sidebarRef = useRef(null);
-  const menuRef = useRef(null);
 
   useEffect(() => {
     if (darkMode) {
@@ -18,38 +16,15 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        sidebarRef.current && !sidebarRef.current.contains(event.target) &&
-        menuRef.current && !menuRef.current.contains(event.target)
-      ) {
-        setSidebarOpen(false);
-        setMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
   const toggleSidebar = () => {
-    if (menuOpen) {
-      setMenuOpen(false); // Menutup menu jika terbuka
-    }
     setSidebarOpen(!sidebarOpen);
   };
 
   const toggleMenu = () => {
-    if (sidebarOpen) {
-      setSidebarOpen(false); // Menutup sidebar jika terbuka
-    }
     setMenuOpen(!menuOpen);
   };
 
@@ -84,7 +59,6 @@ const Navbar = () => {
               icon={faCog}
               className={`text-gray-500 hover:text-blue-500 cursor-pointer transition-transform duration-500 ${sidebarOpen ? 'rotate' : ''}`}
               onClick={toggleSidebar}
-              ref={sidebarRef}
             />
           </div>
 
@@ -94,13 +68,11 @@ const Navbar = () => {
               icon={faBars}
               className="text-gray-500 hover:text-blue-500 cursor-pointer"
               onClick={toggleMenu}
-              ref={menuRef}
             />
             <FontAwesomeIcon
               icon={faCog}
               className={`text-gray-500 hover:text-blue-500 cursor-pointer transition-transform duration-500 ${sidebarOpen ? 'rotate' : ''}`}
               onClick={toggleSidebar}
-              ref={sidebarRef}
             />
           </div>
         </div>
