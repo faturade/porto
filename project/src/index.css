@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Untuk mencegah scroll saat sidebar terbuka */
+.no-scroll {
+  overflow: hidden;
+}
