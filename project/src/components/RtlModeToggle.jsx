@@ -9,7 +9,7 @@ const RtlModeToggle = ({ rtlMode, toggleRtlMode }) => (
       <div className="flex items-center flex-col ml-4">
         <button
           onClick={toggleRtlMode}
-          className={`w-8 h-4 rounded-full flex items-center p-0.5 ${rtlMode ? 'bg-blue-500' : 'bg-gray-300'}`}
+          className={`w-8 h-4 rounded-full flex items-center p-0.5 ${rtlMode ? 'bg-gray-700' : 'bg-gray-300'}`}
         >
           <div
             className={`w-3 h-3 rounded-full bg-white transform transition-transform duration-300 ${rtlMode ? 'translate-x-4' : ''}`}

@@ -1,0 +1,26 @@
+{
+    "about": "About",
+    "description": "Hi! I'm Ade Faturahman, a frontend developer passionate about creating responsive and interactive web applications using modern technologies like React and Tailwind CSS. My focus is on delivering efficient, clean user interfaces that provide a great user experience.",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "navbarTitle": "My Portofolio",
+    "h1": "Hi, I'm Ade Faturahman",
+    "p": "A Frontend Developer",
+    "button": "See My Work",
+    "footer": "2024 Ade Faturahman. All Rights Reserved.",
+    "h2": "Contact Me",
+    "project1": "Responsive Web App",
+    "project2": "E-Commerce Platform",
+    "project3": "Personal Blog",
+    "projectp1": "A responsive web application built using React and Tailwind CSS.",
+    "projectp2": "An e-commerce platform with dynamic components and user authentication.",
+    "projectp3": "A personal blog created with React and Markdown for content management.",
+    "a": "Learn More",
+    "submit": "Thank you for your message!",
+    "labelname": "Name",
+    "labelemail": "Email",
+    "labelmassage": "Massage",
+    "sendmassage": "Send Massage"
+}
+  

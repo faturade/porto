@@ -9,7 +9,7 @@ const DarkModeToggle = ({ darkMode, toggleDarkMode }) => (
       <div className="flex flex-col items-center ml-4">
         <button
           onClick={toggleDarkMode}
-          className={`w-8 h-4 rounded-full flex items-center p-0.5 ${darkMode ? 'bg-blue-500' : 'bg-gray-300'}`}
+          className={`w-8 h-4 rounded-full flex items-center p-0.5 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
         >
           <div
             className={`w-3 h-3 rounded-full bg-white transform transition-transform duration-300 ${darkMode ? 'translate-x-4' : ''}`}

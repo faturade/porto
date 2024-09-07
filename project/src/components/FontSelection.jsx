@@ -17,7 +17,7 @@ const FontSelection = ({ fonts, selectedFont, handleFontChange }) => {
   return (
     <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-md mt-4 relative h-80">
       <div className="flex items-center justify-between">
-        <span className="text-gray-700 dark:text-gray-300 font-semibold">Font Selection</span>
+        <span className="text-gray-700 dark:text-gray-300 font-bold text-xl">Font Selection</span>
         <FontAwesomeIcon
           icon={faSearch}
           className="text-gray-500 dark:text-gray-400 ml-2 cursor-pointer"
